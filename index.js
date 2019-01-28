@@ -57,13 +57,13 @@ var workflow = [
 //Main
 //==========================
 
-console.log()
 wordObj.return();
 
 inquirer.prompt(workflow).then(() => {
-
-
     console.log(wordObj);
     // console.log(JSON.stringify(hang, null, '  '));
+    console.log("Hangman: " + hangman);
+
 
 });
+
