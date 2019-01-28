@@ -5,16 +5,37 @@
 //A boolean value that stores whether that letter has been guessed yet
 
 
-function Letter(isGuessed, input, blank) {
-    this.isGuessed = isGuessed,
+function Letter(secret, input) {
+    this.isGuessed = false,
         this.guess = input,
-        this.blank = blank,
+        this.blank = true,
         this.return = function () {
             //A function that returns the underlying character if the letter has been 
             //guessed, or a placeholder (like an underscore) if the letter has not been 
             //guessed 
+         
+                //Check if letters in word
             
-            // if(this.guess == )
+              
+            
+                for (var i=0; i < secret.length; i++) {
+                    if (secret[i] == this.guess) {
+                        this.isGuessed = true;
+                        
+                    }
+                }
+                if (this.isGuessed) {
+                    for (var i=0; i < secret.length; i++) {
+                        if (secret[i] == this.guess) {
+                            correct[i] = this.guess;
+                        }
+                    }
+                }
+                else {
+                   console.log("Last Else")
+                
+                }
+            
             
         }
     this.checkGuess = function () {
